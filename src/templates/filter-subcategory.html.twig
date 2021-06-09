@@ -1,0 +1,6 @@
+<select name="vt_annuaire_sub_category" id="vt_annuaire_sub_category">
+    <option value="">Type</option>
+    {% for term in terms %}
+        <option value="{{ term.name }}">{{ term.name }}</option>
+    {% endfor %}
+</select>

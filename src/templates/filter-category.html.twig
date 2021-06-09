@@ -1,0 +1,8 @@
+<select id="vt_annuaire_cat" name="vt_annuaire_cat">
+    <option value="">Choisissez une catégorie</option>
+    {% for category in categories %}
+        <option value="{{ category.term_id }}" {% if current_category == category.term_id %}selected="selected"{% endif %}>
+            {{ category.name }}
+        </option>        
+    {% endfor %}
+</select>

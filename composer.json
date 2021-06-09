@@ -1,0 +1,19 @@
+{
+    "name": "vtrotot/annuaire-post-type",
+    "description": "Annuaire Custom Post Type for WordPress Theme",
+    "require": {
+        "timber/timber": "^1.18",
+        "symfony/http-foundation": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "VincentTrotot\\Annuaire\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vincent TROTOT",
+            "email": "vincent.trotot@icloud.com"
+        }
+    ]
+}
