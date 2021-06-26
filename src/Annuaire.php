@@ -35,4 +35,20 @@ class Annuaire extends Post
            }
         }
     }
+    
+    public static function getSubCategories()
+    {
+        usort(self::$sub_categories, [Annuaire::class, 'cmp']);
+        return self::$sub_categories;
+    }
+
+    public static function cmp($a, $b)
+    {
+        $al = strtolower($a->name);
+        $bl = strtolower($b->name);
+        if ($al == $bl) {
+            return 0;
+        }
+        return ($al > $bl) ? +1 : -1;
+    }
 }
