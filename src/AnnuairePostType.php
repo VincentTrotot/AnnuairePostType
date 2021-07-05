@@ -3,6 +3,7 @@
 namespace VincentTrotot\Annuaire;
 
 use Timber\Timber;
+use EasySlugger\Slugger;
 use Symfony\Component\HttpFoundation\Request;
 
 class AnnuairePostType
@@ -143,7 +144,7 @@ class AnnuairePostType
         if (is_object($post)) {
             $terms = wp_get_object_terms($post->ID, 'vt_annuaire_category');
             if ($terms) {
-                return str_replace('%vt_annuaire_category%', strtolower($terms[0]->name), $post_link);
+                return str_replace('%vt_annuaire_category%', Slugger::slugify($terms[0]->name), $post_link);
             }
         }
         return $post_link;
