@@ -3,6 +3,7 @@
 namespace VincentTrotot\Annuaire;
 
 use Timber\Post;
+use EasySlugger\Slugger;
 
 class Annuaire extends Post
 {
@@ -44,8 +45,8 @@ class Annuaire extends Post
 
     public static function cmp($a, $b)
     {
-        $al = strtolower($a->name);
-        $bl = strtolower($b->name);
+        $al = Slugger::slugify($a->name);
+        $bl = Slugger::slugify($b->name);
         if ($al == $bl) {
             return 0;
         }
