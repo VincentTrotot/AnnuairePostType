@@ -321,6 +321,7 @@ class AnnuairePostType
         update_post_meta($post->ID, "vt_annuaire_address", $_POST['vt_annuaire_address']);
         update_post_meta($post->ID, "vt_annuaire_phone", $_POST['vt_annuaire_phone']);
         update_post_meta($post->ID, "vt_annuaire_mail", $_POST['vt_annuaire_mail']);
+        update_post_meta($post->ID, "vt_annuaire_website", $_POST['vt_annuaire_website']);
     }
 
     /**

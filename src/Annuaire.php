@@ -11,6 +11,7 @@ class Annuaire extends Post
     public $address;
     public $phone;
     public $mail;
+    public $website;
     
     public static $sub_categories = [];
 
@@ -21,6 +22,7 @@ class Annuaire extends Post
         $this->address = $this->meta('vt_annuaire_address');
         $this->phone = $this->meta('vt_annuaire_phone');
         $this->mail = $this->meta('vt_annuaire_mail');
+        $this->website = $this->meta('vt_annuaire_website');
         
         $sub_categories = $this->terms([
             'query' => [
